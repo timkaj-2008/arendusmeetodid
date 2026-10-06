@@ -3,7 +3,7 @@
 ## Diagrammid
 
 ### Liidestuse skeem (Smart-ID)
-![Smart-ID liidestuse skeem](diagrammid.drawio)
+![Smart-ID liidestuse skeem](diagrammid/diagrammid.drawio)
 
 ## Projekti tüübid
 
