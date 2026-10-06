@@ -23,6 +23,7 @@
 - **Peamine risk:** Ajalooliste andmete (kasutajad, broneeringud, maksed) migreerimisel tekivad andmetüüpide ühilduvusvead või andmekadu.
 - **Esimene samm:** Viia läbi proovimigratsioon (dry-run) viimaste andmete koopia peal ja loendada kirjed enne koodi ümberkirjutamist.
 
+
 ---
 
 ### (c) Liidestamine: Smart-ID sisselogimine
