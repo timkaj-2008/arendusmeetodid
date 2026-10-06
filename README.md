@@ -1,5 +1,10 @@
 # arendusmeetodid
 
+## Diagrammid
+
+### Liidestuse skeem (Smart-ID)
+![Smart-ID liidestuse skeem](diagrammid.drawio)
+
 ## Projekti tüübid
 
 ### (a) Uus funktsioon: Automaatne tühistamine ja teavitus
