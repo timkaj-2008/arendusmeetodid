@@ -5,6 +5,26 @@
 ### Liidestuse skeem (Smart-ID)
 ![Smart-ID liidestuse skeem](diagrammid.drawio)
 
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Kasutaja
+    participant Rakendus as Teie Süsteem
+    participant SmartID as Smart-ID API
+
+    Kasutaja->>Rakendus: Vajutab "Logi sisse Smart-ID-ga" ja sisestab isikukoodi
+    Rakendus->>SmartID: POST /authentication/pnr (isikukood)
+    
+    alt Smart-ID vastab edukalt
+        SmartID-->>Kasutaja: Kuvab kontrollkoodi ja teavitust telefonis (PIN1)
+        Kasutaja->>SmartID: Sisestab PIN1 koodi
+        SmartID-->>Rakendus: 200 OK (Autentimine kinnitatud, nimi, isikukood)
+        Rakendus-->>Kasutaja: Sisselogimine õnnestus (Tere tulemast!)
+    else Smart-ID ei vasta / Katkestus (Timeout > 10s või Viga)
+        SmartID-->>Rakendus: Timeout / 500 Viga / Tühistatud
+        Rakendus-->>Kasutaja: "Smart-ID autentimine ebaõnnestus. Palun proovi uuesti või kasuta parooli."
+    end
+```
 ## Projekti tüübid
 
 ### (a) Uus funktsioon: Automaatne tühistamine ja teavitus
